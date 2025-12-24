@@ -1,19 +1,21 @@
-<table>
-  <thead>
-    <tr>
-      <th>Année</th>
-      <th>Âge</th>
-      <th>Capital (FCFA)</th>
-    </tr>
-  </thead>
+<div class="table-wrapper">
+  <table class="projection-table">
+    <thead>
+      <tr>
+        <th>Année</th>
+        <th>Âge</th>
+        <th>Capital (FCFA)</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    @for (point of points; track point.year) {
-    <tr>
-      <td>{{ point.year }}</td>
-      <td>{{ point.age }}</td>
-      <td>{{ point.capital }}</td>
-    </tr>
-    }
-  </tbody>
-</table>
+    <tbody>
+      @for (point of points; track point.year) {
+      <tr>
+        <td>{{ point.year }}</td>
+        <td>{{ point.age }}</td>
+        <td class="amount">{{ point.capital }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
