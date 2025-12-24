@@ -1,7 +1,9 @@
-<h1>Projection financière</h1>
+<section class="page">
+  <h1>Projection financière</h1>
 
-@if (projection.length > 0) {
-<app-projection-table [points]="projection" />
-} @else {
-<p>Aucune donnée disponible.</p>
-}
+  @if (projection.length > 0) {
+  <app-projection-table [points]="projection" />
+  } @else {
+  <p class="empty">Aucune donnée disponible.</p>
+  }
+</section>
