@@ -1,2 +1,7 @@
 <h1>Projection financière</h1>
-<p>Données à venir...</p>
+
+@if (projection.length > 0) {
+<app-projection-table [points]="projection" />
+} @else {
+<p>Aucune donnée disponible.</p>
+}
