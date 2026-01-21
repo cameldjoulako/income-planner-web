@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectionPoint } from '../../models/projection.model';
 import { CompactNumberPipe } from '../../../../shared/pipes/compact-number-pipe';
+import { FcfaCurrencyPipe } from '../../../../shared/pipes/fcfa-currency-pipe';
 
 @Component({
   standalone: true,
   selector: 'app-projection-table',
-  imports: [CommonModule, CompactNumberPipe],
+  imports: [CommonModule, CompactNumberPipe, FcfaCurrencyPipe],
   templateUrl: './projection-table.html',
   styleUrl: './projection-table.scss',
 })
