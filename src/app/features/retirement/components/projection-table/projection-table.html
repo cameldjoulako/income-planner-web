@@ -10,11 +10,11 @@
 
     <tbody>
       @for (point of points; track point.year) {
-      <tr>
-        <td>{{ point.year }}</td>
-        <td>{{ point.age }}</td>
-        <td class="amount">{{ point.capital }}</td>
-      </tr>
+        <tr>
+          <td>{{ point.year }}</td>
+          <td>{{ point.age }}</td>
+          <td class="amount">{{ point.capital | fcfaCurrency }}</td>
+        </tr>
       }
     </tbody>
   </table>
