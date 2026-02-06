@@ -9,8 +9,8 @@
     </thead>
 
     <tbody>
-      @for (point of points; track point.year) {
-        <tr>
+      @for (point of points(); track point.year) {
+        <tr (click)="select(point)">
           <td>{{ point.year }}</td>
           <td>{{ point.age }}</td>
           <td class="amount">{{ point.capital | fcfaCurrency }}</td>

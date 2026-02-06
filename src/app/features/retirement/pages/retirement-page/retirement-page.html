@@ -2,8 +2,8 @@
   <h1>Projection financière</h1>
 
   @if (projection.length > 0) {
-  <app-projection-table [points]="projection" />
+    <app-projection-table [points]="projection" (rowSelected)="onRowSelected($event)" />
   } @else {
-  <p class="empty">Aucune donnée disponible.</p>
+    <p class="empty">Aucune donnée disponible.</p>
   }
 </section>
