@@ -13,4 +13,10 @@ import { MOCK_PROJECTION } from '../../models/mock-projection';
 })
 export class RetirementPage {
   projection: ProjectionPoint[] = MOCK_PROJECTION;
+
+  selectedPoint?: ProjectionPoint;
+
+  onRowSelected(point: ProjectionPoint) {
+    this.selectedPoint = point;
+  }
 }

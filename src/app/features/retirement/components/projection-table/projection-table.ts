@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectionPoint } from '../../models/projection.model';
 import { CompactNumberPipe } from '../../../../shared/pipes/compact-number-pipe';
@@ -12,5 +12,12 @@ import { FcfaCurrencyPipe } from '../../../../shared/pipes/fcfa-currency-pipe';
   styleUrl: './projection-table.scss',
 })
 export class ProjectionTable {
-  @Input({ required: true }) points: ProjectionPoint[] = [];
+  //@Input({ required: true }) points: ProjectionPoint[] = [];//old input
+  points = input<ProjectionPoint[]>([]);
+
+  rowSelected = output<ProjectionPoint>();
+
+  select(point: ProjectionPoint) {
+    this.rowSelected.emit(point);
+  }
 }
